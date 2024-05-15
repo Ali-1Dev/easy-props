@@ -18,7 +18,7 @@
 
 ## Latest news
 
-* 15/11/2020: Version 4.0.0 is now released! You can find all details about the changes in the [release notes](https://github.com/j-easy/easy-props/releases).
+* 15/11/2020: Version 4.0.0 is now released! You can find all details about the changes in the [release notes](https://github.com/Ali-1Dev/easy-props/releases).
 
 ## What is Easy Props?
 
@@ -82,56 +82,6 @@ public class Bean {
 
 Now just create your object and it will be configured and ready to use.
 
-**Without** Easy Props, you would write something like this:
-
-```java
-public class Bean {
-
-    private int threshold;
-
-    private String beanName;
-
-    public Bean() {
-
-        //Load 'threshold' property from system properties
-        String thresholdProperty = System.getProperty("threshold");
-        if ( thresholdProperty != null ) {
-            try {
-                threshold = Integer.parseInt(thresholdProperty);
-            } catch (NumberFormatException e) {
-                // log exception
-                threshold = 50; //default threshold value;
-            }
-        }
-
-        //Load 'bean.name' property from properties file
-        Properties properties = new Properties();
-        try {
-            InputStream inputStream = this.getClass().getClassLoader()
-                        .getResourceAsStream("myProperties.properties");
-            if (inputStream != null) {
-                properties.load(inputStream);
-                beanName = properties.getProperty("bean.name");
-            }
-        } catch (IOException ex) {
-            // log exception
-            beanName = "FOO"; // default bean name value
-        }
-
-    }
-
-    //getters and setters omitted
-
-}
-```
-
-As you can see, a lot of boilerplate code is written to load just two properties, convert them to the target field type, etc.
-Easy Props takes care of all this boilerplate with a couple of intuitive annotations, which makes your code cleaner, more readable and maintainable.
-
-In this quick example, you have seen two types of properties sources (system and resource bundle).
-Easy Props can inject properties from many other sources like databases, JNDI contexts, environment variables and more!
-
-Even better, Easy Props allows you write your own annotations and inject properties from custom configuration sources.
 Checkout the complete reference in the project's [wiki](https://github.com/j-easy/easy-props/wiki).
 
 ## Why Easy Props?
