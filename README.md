@@ -16,6 +16,8 @@
 
 ***
 
+### Orginal project link: [link](https://github.com/j-easy/easy-props )
+
 ## Latest news
 
 * 15/11/2020: Version 4.0.0 is now released! You can find all details about the changes in the [release notes](https://github.com/Ali-1Dev/easy-props/releases).
@@ -81,8 +83,6 @@ public class Bean {
 ```
 
 Now just create your object and it will be configured and ready to use.
-
-Checkout the complete reference in the project's [wiki](https://github.com/j-easy/easy-props/wiki).
 
 ## Why Easy Props?
 
